@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>标题</th>
+        <th>作者</th>
+        <th>创建时间</th>
+        <th>点击数</th>
+    </tr>
+    <tr th:each="Artic : ${articleList}">
+        <td><a th:href="@{'item/'+${Artic.id}}" th:text="${Artic.Articlename}" target="_parent"></a></td>
+        <td  th:text="${Artic.Author}"></td>
+        <td  th:text="${#dates.format(Artic.ChangeTime, 'yyyy-MM-dd')}"></td>
+        <td  th:text="${Artic.hitCount}"></td>
+    </tr>
+</table>
+</body>
+</html>

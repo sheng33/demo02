@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息表</title>
+</head>
+<body>
+<span>导航栏:<a href="/main">主页</a>><a>个人信息</a></span>
+<table border="1">
+    <tr >
+        <td>姓名:</td>
+        <td th:text="${name}"></td>
+    </tr>
+    <tr >
+        <td>生日:</td>
+        <td th:text="${birth}"></td>
+    </tr>
+    <tr >
+        <td>年龄:</td>
+        <td ><span th:text="${age}"></span>岁</td>
+    </tr>
+    <tr >
+        <td>职位:</td>
+        <td th:text="${zhiwei}"></td>
+    </tr>
+    <tr>
+        <td><a href="/Passwordrevise">修改密码</a></td>
+    </tr>
+</table>
+</body>
+</html>

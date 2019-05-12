@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>A Simple Page with CKEditor</title>
+    <!-- Make sure the path to CKEditor is correct. -->
+    <script src="/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+<form action="/saveArticle">
+    <span><input type="text" id="Articlename" name="Articlename"></span>
+    <textarea name="content" id="content"cols="20" rows="2"class="ckeditor"></textarea>
+    <input type="submit" style="width: 60px;height: 35px;" value="提交表单" />
+</form>
+
+
+</body>
+
+<script type="text/javascript">
+    function buttonSubmit() {
+        var a=CKEDITOR.instances.TextArea1.getData();
+        alert(a)
+    }
+</script>
+</html>

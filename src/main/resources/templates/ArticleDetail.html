@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>文章详情</title>
+</head>
+<body>
+<span>导航栏:<a href="/main">主页</a>><a th:text="${Artic.Articlename}"></a></span>
+<br/><br/><br/>
+<span>标题:<p th:text="${Artic.Articlename}"></p></span>
+<span>作者:<p th:text="${Artic.Author}"></p></span>
+<span>创建时间<p th:text="${#dates.format(Artic.ChangeTime, 'yyyy-MM-dd')}"></p></span>
+<span>修改时间<p th:text="${#dates.format(Artic.UpdateTime, 'yyyy-MM-dd')}"></p></span>
+<br/>
+<p th:text="${Artic.content}"></p>
+
+</body>
+</html>

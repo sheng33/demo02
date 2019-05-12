@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/register1" method="post">
+        账号id：<input name="idname" id="idname" type="text">
+        用户名：<input name="name" id="name" type="text">
+        密码:<input name="password" id="password" type="password">
+        权限:<select id="power" name="power">
+            <option value ="2">资产管理员</option>
+            <option value ="1">超级管理员</option>
+        </select>
+        出生年月:<input type="date" name="birth" id="birth">
+        <input type="submit" value="注册">
+    </form>
+    <form action="/sendMail" method="post">
+        <input type="text" id="mail">
+        <input type="submit" value="发送">
+    </form>
+</body>
+</html>
